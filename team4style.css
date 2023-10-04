@@ -1,4 +1,26 @@
-<!DOCTYPE html>
+< !DOCTYPE html><html lang="en"><head><title>Team 4 from css</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+ background: rgb(248, 200, 208);
+  color: black
+  font-size: 30px;
+}
+
+/* Page Content */
+.content {
+  padding: 20px;
+  background: rgb(255, 208, 244);
+}
+
 <html>
 <head>
 <style> 
