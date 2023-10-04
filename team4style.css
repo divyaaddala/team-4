@@ -23,6 +23,7 @@ content {
   background:  solid rgb(238, 155, 169);}
 
 .div2 {
+  margin: 20px;
   display: grid;
   justify-items: center;
 
