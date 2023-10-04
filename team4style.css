@@ -16,10 +16,10 @@ body {
 }
 
 .div2 {
-  width: 400px;
-  height: 200px;  
+  width: 350px;
+  height: 150px;  
   padding: 50px;
-  border: 1px solid red;
+  border: 1px navyblue;
   box-sizing: border-box;
 }/* Page Content */
 .content {
