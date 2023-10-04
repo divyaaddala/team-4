@@ -10,13 +10,14 @@ body {
 .header {
   padding: 60px;
   text-align: center;
- background: lightpink;
-  color: white;
+background: navy;
+  color: rgb(255, 182, 238);
   font-size: 30px;
 }
 
 /* Page Content */
 .content {
   padding: 20px;
-background: lightpink;
+background: rgb(253, 179, 190);
 }
+
