@@ -20,7 +20,8 @@ content {
   padding: 20px;
   display: grid;
   place-items: center;
-  background:  solid rgb(238, 155, 169);}
+  background:  solid rgb(238, 155, 169);
+}
 
 .div2 {
   margin-right: 50px;
@@ -36,5 +37,6 @@ content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  {
   justify-content: center;
 }
