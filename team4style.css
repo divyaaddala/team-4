@@ -19,7 +19,7 @@ body {
   width: 350px;
   height: 150px;  
   padding: 50px;
-  border: 1px navyblue;
+  border: 1px solid pink;
   box-sizing: border-box;
 }/* Page Content */
 .content {
