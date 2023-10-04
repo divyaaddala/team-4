@@ -18,7 +18,7 @@ body {
 .div2 {
   width: 350px;
   height: 150px;  
-  padding: 50px;
+  padding: 80px;
   border: 1px solid pink;
   box-sizing: border-box;
 }/* Page Content */
