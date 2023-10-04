@@ -10,7 +10,7 @@ body {
 .header {
   padding: 60px;
   text-align: center;
-background: RGB(248, 200, 208);
+  background: RGB(248, 200, 208);
   color: black
   font-size: 30px;
 }
@@ -24,6 +24,6 @@ background: RGB(248, 200, 208);
 }/* Page Content */
 .content {
   padding: 20px;
-  background: rgb(255, 208, 244);
+  background: RGB(255, 208, 244);
 }
 }
