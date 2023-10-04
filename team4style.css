@@ -18,12 +18,10 @@ body {
 .div2 {
   width: 350px;
   height: 150px;  
-  padding: 80px;
-  border: 1px solid pink;
+  padding: 85px;
+  border: 1px solid rgb(0, 0, 0);
   box-sizing: border-box;
 }/* Page Content */
 .content {
   padding: 20px;
-  background: RGB(255, 208, 244);
-}
-}
+  background:  solid rgb(238, 155, 169);
