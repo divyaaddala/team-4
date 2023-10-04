@@ -18,6 +18,7 @@ background: rgb(248, 200, 208);
 /* Page Content */
 .content {
   padding: 20px;
+   text-align: center;
 background: rgb(255, 208, 244);
 
 <html>
