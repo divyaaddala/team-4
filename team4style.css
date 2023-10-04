@@ -11,19 +11,21 @@ body {
   padding: 60px;
   text-align: center;
   background: RGB(248, 200, 208);
-  color: black
+  color: black;
   font-size: 50px;
 }
 
 /* Page Content */
 content {
   padding: 20px;
-  margin-left auto;
-  margin-right auto;
+  display: grid;
+  place-items: center;
   background:  solid rgb(238, 155, 169);}
 
-  
 .div2 {
+  display: grid;
+  justify-items: center;
+
   width: 350px;
   height: 150px;  
   padding: 85px;
