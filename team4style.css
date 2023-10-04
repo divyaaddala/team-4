@@ -14,14 +14,18 @@ body {
   color: black
   font-size: 50px;
 }
-
-.div2 {
+/* Page Content */
+content {
+  padding: 20px;
+  margin-left auto;
+  margin-right auto;
+  background:  solid rgb(238, 155, 169);
+  
+.div2 
   width: 350px;
   height: 150px;  
   padding: 85px;
   border: 1px solid rgb(0, 0, 0);
-  box-sizing: border-box;
-}/* Page Content */
-.content {
-  padding: 20px;
-  background:  solid rgb(238, 155, 169);
+  box-sizing: border-box; }
+
+.
