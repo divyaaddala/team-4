@@ -32,7 +32,10 @@ background: rgb(248, 200, 208);
   padding: 50px;
   border: 1px solid red;
   box-sizing: border-box;
-}
+}/* Page Content */
+.content {
+  padding: 20px;
+  background: rgb(255, 208, 244);
 </style>
 </head>
 <body>
