@@ -11,28 +11,22 @@ body {
   padding: 60px;
   text-align: center;
   background: RGB(248, 200, 208);
-  color: black;
-  font-size: 50px;
-}
-
-/* Page Content */
-content {
-  padding: 20px;
-  display: grid;
-  place-items: center;
-  background:  solid rgb(238, 155, 169);
+  color: black
+  font-size: 30px;
 }
 
 .div2 {
-  margin-right: 50px;
-  width: 350px;
-  height: 150px;  
-  padding: 85px;
-  border: 1px solid rgb(0, 0, 0);
-  box-sizing: border-box; 
+  width: 300px;
+  height: 100px;  
+  padding: 50px;
+  border: 1px solid red;
+  box-sizing: border-box;
+}/* Page Content */
+.content {
+  padding: 20px;
+  background: RGB(255, 208, 244);
 }
-.container {
-  max-width: 500px;
+}
   margin:auto;
   display: flex;
   flex-direction: row;
