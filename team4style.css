@@ -20,29 +20,6 @@ body {
   font-size: 30px;
 }
 
-/* Page Content */
-.content {padding:20px;}
-</style>
-</head>
-<body>
-
-<div class="header">
-  <h1>Team 4</h1>
-  <p>Divya Addala, Apoorva Bathula, Nithya Rao, Srishreya Srihari, Pradhi Waghray</p>
-</div>
-
-<div class="content">
-  <h1>Menu</h1>
-  <p>Team Page (2)</p>
-  <p>Divya Addala: Webmaster (3) </p>
-  <p>Pradhi Waghray: Content Specialist (4).</p>
-  <p>Nithya Rao:  Front-end and Back-end developer (5) <p>
-  <p>Srishreya: Tech Support and QA Specialist (6)<p>
-  <p>Apoorva: Site Architect (7)<p>
-
-  
-</div>
-
 </body>
 </html>
 }
