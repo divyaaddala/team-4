@@ -1,8 +1,8 @@
-.header {Team 4
-  background-color: #F1F1F1;
-  text-align: center;
-  padding: 20px;
-body {
+<div class="header">
+  <h1>Team 4</h1>
+  <p> Team members:Divya Addala, Apoorva Bathula, Nithya Rao, Pradhi Waghray, SriShreya Sriharir</p>
+</div>
+
   background-color: lightpink;
 }
 
