@@ -1,8 +1,30 @@
-< !DOCTYPE html><html lang="en"><head><title>Team 4 from css</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: lightblue;
+}
 
+h1 {
+  color: white;
+  text-align: center;
+}
 
-/* Header/Logo Title */
-.header {
+p {
+  font-family: verdana;
+  font-size: 35px;
+}
+</style>
+</head>
+<body>
+
+<h1>Team 4</h1>
+<p>Team members:Divya Addala, Apoorva Bathula, Nithya Rao, Srishreya Srihari, Pradhi Waghray.</p>
+
+</body>
+</html>
+  
   padding: 60px;
   text-align: center;
   background: RGB(248, 200, 208);
