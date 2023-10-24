@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../styles.css"/>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <title>Login - Group 3</title>
+        <link rel="icon" type="image/x-icon" href="../favicon.ico">
+        <!doctype html>
+<script type="text/javascript">
+    var fName = null; 
+    var lName = null; 
+    var link = null; 
+    var desc = null; 
+    var imageSource = null; 
+    var cRoles = null; 
+    var user = null; 
+    var pass = null; 
+    var roles = ["Webmaster", "Content Specialist", "Front end developer", "Back end developer", "Tech Support", "QA specialist", "Architect"]
+    var p1Roles = [];
+    var p2Roles = [];
+    var p3Roles = [];
+    var p4Roles = [];
+    var p5Roles = [];
+    var p6Roles = [];
+    var p7Roles = [];
+    var p8Roles = [];
+    var rolesArray = [cRoles, p1Roles, p2Roles, p3Roles, p4Roles, p5Roles, p6Roles, p7Roles, p8Roles];
+    var pjNames = null;  
+
+    var webmaster       = null; 
+    var cSpecialist     = null; 
+    var fEndDev         = null; 
+    var bEndDev         = null; 
+    var techSupport     = null; 
+    var QAspecialist    = null; 
+    var architect       = null; 
+    var teamRoles = [webmaster, cSpecialist, fEndDev, bEndDev, techSupport, QAspecialist, architect];
+
+    function pRolesFill (title) {
+        for (var i = 0; i < roles.length; i++) {
+            title.push (fName[teamRoles[i][0]-1]);
+        }
+    }
+    
+    for (var i = 0; i < webmaster.length; i++) {
+        pRolesFill(rolesArray[i+1]); 
+    }
+
+    for (var i = 0; i < pjNames.length; i++) {
+        rolesArray[i].push (pjNames[i]);
+    }
+
+    function setup () {
+        setupPerson();
+
+        for (var i = 0; i < pjNames.length; i++) {
+            if (rolesArray[i][5] !== "") {
+                setupRoles(rolesArray[i]);
+            }
+        }
+
+    }
+
+    function setupPerson () {
+        for (var i = 0; i < fName.length; i++) {
+            var gotoLink = link[i];
+
+            if (gotoLink === "") {
+                gotoLink = "https://www.google.com";//Link when undefined
+            }
+            if (gotoLink.slice(0,8) !== "https://") {
+                gotoLink = "members/" + gotoLink;
+            }
+            var goToSource = imageSource[i];
+            if (goToSource === "") {
+                goToSource = "img_thumbnail.svg";
+            }
+
+            addPerson(fName[i], lName[i], goToSource, gotoLink, desc[i]);
+        };
+    }
+
+    function addPerson (firstName, lastName, imageSource, link, desc) {
+        document.getElementById("team").innerHTML += `
+            <section>
+                <article>
+                    <img src="${imageSource}" alt="thumbnail">
+                        <div class="name holder">
+                            <h1 class="name"> ${firstName} ${lastName} </h1>
+                        </div>
+                        <div class="desc holder">
+                            <p class="desc">${desc}</p>
+                        </div>
+                    <a class="goto" href="${link}">Learn More</a>
+                </article>
+            </section>`;
+    }
+
+    function setupRoles (title) {
+
+        if (title[5] === cRoles [5]) {
+            var appendHTML = '<article><h1>' + title[5] + ' Roles' + '</h1><ul>';
+            for (var i = 0; i<fName.length; i++) {
+                appendHTML += '<li>' + title[i] + ": " + fName[i] + '</li>'
+            }
+        } else {
+            var appendHTML = '<article><h1>' + title[7] + ' Roles' + '</h1><ul>';
+            for (var i = 0; i<roles.length; i++) {
+                var name = title[i] - 1;
+                appendHTML += '<li>' + roles[i] + ": " + title[i] + '</li>'
+            }
+        }
+        
+        
+        appendHTML += '</ul></article>';
+        document.getElementById("roles").innerHTML += appendHTML;
+    }
+
+    function pjList (title) {
+        var toHtml = ""; 
+
+        for (var i = 1; i<title.length; i++) {
+            toHtml += "<li>" + title[i] + "</li>"; 
+        }
+        console.log(toHtml);
+        document.getElementById("pjs").innerHTML = toHtml;
+    }
+
+    function setupTop (toRootPath) {
+        var toIndexPath = toRootPath;
+        var toWebsitePath = '#';
+        var appendHTML = `
+            <a href="${toIndexPath}">
+                <img id="code_icon" src="${toRootPath}img_logo.svg" alt="logo">
+            </a>
+            <nav class="holder">
+                <ul>
+                    <li>
+                        <div class="drop">
+                            <a href="${toIndexPath}#team"> Member v </a>
+                            <div class="dropstuff">
+                                <ul id="member_dropstuff">
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="${toIndexPath}#projects"> Projects </a></li>
+                    <li><a href="${toIndexPath}#roles">Roles</a></li>
+                    <li><a href="${toRootPath}/contact">Contact Us</a></li>
+                    <li><a href="${toRootPath}/login" id="button">LOG IN</a></li>
+                </ul>
+            </nav>`;
+        document.getElementById("top").innerHTML += appendHTML;
+        
+        for (var i = 0; i < fName.length; i++) {
+            var gotoLink = link[i];
+            gotoLink = toRootPath + "members/" + gotoLink;
+            document.getElementById("member_dropstuff").innerHTML +=
+                '<hr><li><a href="' + gotoLink + '"> ' + fName[i] + ' </a></li>';
+        }
+        document.getElementById("member_dropstuff").innerHTML += '<hr>';
+    }
+</script>
+</html>
+        </script>
+    </head>
+    <body onload="setupTop('../')">
+        <header id="top"></header>
+        <div class="holder">
+            <form action="process.php" method="post">
+                <span class="material-symbols-rounded">account_circle</span>
+                <br>
+                <label for="LOGIN-uname">Username:</label>
+                <input id="LOGIN-uname" name="name" type="text">
+                <br>
+                <label for="LOGIN-pass">Password:</label>
+                <input id="LOGIN-pass" name="pass" type="password">
+                <br>
+                <input type="submit">
+            </form>
+        </div>
+    </body>
+</html>
