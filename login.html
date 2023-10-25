@@ -1,208 +1,53 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  background-color: lightpink;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-</style>
-</head>
-<body>
-
-<h2>Login to edit our team</h2>
-
-<button onclick="document.getElementById('.modal-content').style.display='block'" style="width:auto;">Login</button>
-
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/register.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('.modal-xontent').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('.modal-content').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-
-<script>
-const passwordInput = document.getElementById("login-password");
-const passwordToggle = document.getElementById("password-toggle");
-passwordToggle.addEventListener("click", () => {
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text";
-    passwordToggle.classList.remove("fa-eye");
-    passwordToggle.classList.add("fa-eye-slash");
-  } else {
-    passwordInput.type = "password";
-    passwordToggle.classList.remove("fa-eye-slash");
-    passwordToggle.classList.add("fa-eye");
-            }
-        });
-
-        document.getElementById("login-button").addEventListener("click", function (event) {
-            event.preventDefault();
-            const username = document.getElementById("login-username").value;
-            const password = document.getElementById("login-password").value;
- if (username && password) {
-   document.getElementById("message").innerText = "Login successful!";
-   document.getElementById("message").classList.add("success");
- } else {
-   document.getElementById("message").innerText = "Please fill in all fields.";
-   document.getElementById("message").classList.remove("success");
-            }
-        });
-const paragraph = document.getElementById("edit");
-const edit_button = document.getElementById("edit-button");
-const end_button = document.getElementById("end-editing");
-
-edit_button.addEventListener("click", function() {
-  paragraph.contentEditable = true;
-  paragraph.style.backgroundColor = "#dddbdb";
-} );
-
-end_button.addEventListener("click", function() {
-  paragraph.contentEditable = false;
-  paragraph.style.backgroundColor = "#ffe44d";
-} )
-</script>
-
-</body>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    <form action="login" method="post">
+      Username: <input type="text" name="username"><br>
+      Password: <input type="password" name="password"><br>
+      <input type="submit" value="Login">
+    </form>
+  </body>
 </html>
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
 
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        if ("your_username".equals("divya.addala07@gmail.com") && "your_password".equals("#krivya11")) {
+            response.sendRedirect("welcome.jsp"); // Redirect to a welcome page
+        } else {
+            response.sendRedirect("error.jsp"); // Redirect to an error page
+        }
+    }
+}
+  <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+  <head>
+    <title>Welcome</title>
+  </head>
+  <body>
+    <h2>Welcome, User!</h2>
+  </body>
+</html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+  <head>
+    <title>Error</title>
+  </head>
+  <body>
+    <h2>Invalid username or password!</h2>
+  </body>
+</html>
