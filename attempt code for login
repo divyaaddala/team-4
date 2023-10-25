@@ -1,0 +1,17 @@
+<div class="container">
+	<h1 class="mt-5 mb-5">Login</h1>
+	<form>
+		<div class="mb-3">
+			<label for="username" class="form-label">Username</label>
+			<input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+		</div>
+		<div class="mb-3">
+			<label for="password" class="form-label">Password</label>
+			<input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+		</div>
+		<div class="mb-3 form-check">
+			<input type="checkbox" class="form-check-input" id="rememberMe">
+			<label class="form-check-label" for="rememberMe">Remember me</label>
+		</div>
+		<a type="submit" class="btn btn-primary" href="manage_team.html">Login</a>
+	
