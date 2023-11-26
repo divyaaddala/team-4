@@ -1,7 +1,7 @@
 <?php
 // Replace these with your actual credentials
-$valid_username = 'user123';
-$valid_password = 'password123';
+$valid_username = 'wolverines';
+$valid_password = 'team4';
 
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
