@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($entered_username === $valid_username && $entered_password === $valid_password) {
         // Authentication successful
         // Redirect to the dashboard or any other page
-        header('Location: dashboard.html');
+        header('Location: index.html');
         exit();
     } else {
         // Authentication failed
